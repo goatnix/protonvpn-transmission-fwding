@@ -1,0 +1,10 @@
+[Unit]
+Description=Keep transmission docker updated with forwarded port from protonvpn
+
+[Service]
+ExecStart=/usr/bin/python3 /home/user/transmission/update_transmission_port.py
+Restart=always
+RestartSec=45
+
+[Install]
+WantedBy=default.target
