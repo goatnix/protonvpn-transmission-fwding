@@ -1,7 +1,6 @@
 import yaml
 import subprocess
 import json
-from datetime import datetime
 
 transmission_settings = "/home/user/transmission/config/settings.json"
 docker_compose = "/home/user/transmission/docker-compose.yml"
