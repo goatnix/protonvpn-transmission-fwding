@@ -14,6 +14,7 @@ def get_configured_port():
 
 
 def get_current_port():
+    subprocess.check_output(["natpmpc", "-a", "0", "0", "tcp", "60"])
     output = subprocess.check_output(["natpmpc", "-a", "0", "0", "udp", "60"])
     current_port = output.decode().split("Mapped public port ")[1].split()[0]
     return current_port
